@@ -1,4 +1,4 @@
-// File: /Users/brunolaureanodossantos/lp-dooor-new/app/layout.tsx
+// File: /Users/brunolaureanodossantos/enterprise-lp/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

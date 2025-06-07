@@ -401,7 +401,7 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl lg:text-9xl font-extralight mb-8">
-              Our <span className="text-transparent bg-gradient-to-b from-gray-400 to-gray-400/20 bg-clip-text">Tech Stack</span>
+              <span className="text-transparent bg-gradient-to-b from-gray-400 to-gray-400/20 bg-clip-text">Our Tech Stack</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
               Built with cutting-edge technology and enterprise-grade infrastructure designed for healthcare excellence.
@@ -974,8 +974,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
-              Built on <span className="text-gray-400">enterprise-grade</span> technology
+            <h2 className="text-5xl pb-2 text-transparent bg-gradient-to-b from-gray-400 to-gray-400/20 bg-clip-text lg:text-9xl font-extralight mb-8">
+              Built on <span className="">enterprise-grade</span> technology
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
               Security, compliance, and performance at the core of everything we build.
@@ -1064,24 +1064,24 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+            <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
               Ready to transform your <span className="text-gray-400">healthcare organization?</span>
             </h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl font-extralight text-gray-400 mb-12 max-w-2xl mx-auto">
               Join leading Brazilian healthcare institutions that have already revolutionized their clinical workflows with Dooor.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
+                className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
               >
                 Schedule a Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
+                className="border border-white text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
               >
                 Contact Sales
               </motion.button>
