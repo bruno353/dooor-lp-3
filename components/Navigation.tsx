@@ -38,10 +38,10 @@ const Navigation = () => {
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
               <div className="relative group h-full flex items-center">
-                <Link href="/products" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                <div className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
                   Product Suite
-                </Link>
-                <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                </div>
+                {/* <div className="absolute left-0 mt-2 w-48 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="py-1">
                     <Link href="/products/ambient-ai" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">
                       Ambient AI Documentation
@@ -56,7 +56,7 @@ const Navigation = () => {
                       EHR Integration
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="w-px bg-white/30 h-full"></div>
               <Link href="/contact" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
