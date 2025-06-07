@@ -29,12 +29,12 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-11 h-16">
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/about" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
-                About
+              <Link href="/partnerships" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                Partnerships
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/resources" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
-                Resources
+              <Link href="/company" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                Company
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
               <div className="relative group h-full flex items-center">
@@ -89,11 +89,11 @@ const Navigation = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900">
-            <Link href="/about" className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              About
+            <Link href="/partnerships" className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Partnerships
             </Link>
-            <Link href="/resources" className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              Resources
+            <Link href="/company" className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Company
             </Link>
             <Link href="/products" className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Product Suite

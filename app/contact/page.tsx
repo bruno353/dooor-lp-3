@@ -1,256 +1,203 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Twitter } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import BlobAnimation from '../../components/BlobAnimation'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    company: '',
-    phone: '',
-    title: '',
-    message: ''
-  })
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-  }
-
-  const handleChange = (e: any) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+  const handleEmailContact = () => {
+    window.location.href = 'mailto:thiago@dooor.ai?subject=Inquiry about Verifiable AI Solutions'
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white relative">
+      {/* Global Blob Animation Background */}
+      <BlobAnimation 
+        opacity={0.3} 
+        zIndex={1} 
+        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        color="white" 
+      />
+      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h1 className="text-6xl lg:text-8xl font-extralight mb-8 leading-tight">
+              Discover <span className="text-gray-400">Verifiable AI</span>
+            </h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
+              Ready to transform your organization with AI that's private, ownable, and auditable? 
+              Let's explore how Dooor can become the foundation for your most ambitious goals.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-start">
+            
+            {/* Form Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-left"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 h-full flex flex-col"
             >
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                Let's get in <span className="text-gradient">touch</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Ready to see how Dooor can transform your organization? Drop in your information below and we'll be in touch.
+              <h2 className="text-3xl font-extralight mb-8 text-white">Get in Touch</h2>
+              <p className="text-gray-400 font-extralight mb-12 leading-relaxed">
+                Ready to discuss how Verifiable AI can transform your organization? 
+                Our team of AI architects and engineers is standing by to explore your unique challenges and co-develop the perfect solution.
               </p>
               
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-cyan-400 mr-4" />
-                  <span className="text-gray-300">solutions@dooor.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-cyan-400 mr-4" />
-                  <span className="text-gray-300">+55 (11) 9999-9999</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-cyan-400 mr-4" />
-                  <span className="text-gray-300">São Paulo, Brazil</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="h-6 w-6 text-cyan-400 mr-4" />
-                  <span className="text-gray-300">Same day submissions</span>
+              {/* Contact Button */}
+              <motion.button
+                onClick={handleEmailContact}
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-white text-black px-8 py-4 rounded-2xl text-lg font-medium hover:bg-gray-100 transition-all duration-300 flex items-center justify-center group"
+              >
+                <Mail className="h-5 w-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                Send us an Email
+              </motion.button>
+              
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500 font-extralight">
+                  This will open your email client to send a message to{' '}
+                  <span className="text-gray-300">thiago@dooor.ai</span>
+                </p>
+              </div>
+
+              {/* Additional Contact Info */}
+              <div className="mt-12 pt-8 border-t border-white/10 flex-grow flex flex-col justify-end">
+                <h3 className="text-lg font-medium mb-6 text-white">Prefer a different approach?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center text-gray-400">
+                    <Mail className="h-5 w-5 mr-3" />
+                    <span className="font-extralight">thiago@dooor.ai</span>
+                  </div>
+                  <div className="flex items-center text-gray-400">
+                    <Linkedin className="h-5 w-5 mr-3" />
+                    <a 
+                      href="https://linkedin.com/company/dooor" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-extralight hover:text-white transition-colors"
+                    >
+                      linkedin.com/company/dooor
+                    </a>
+                  </div>
+                  <div className="flex items-center text-gray-400">
+                    <Twitter className="h-5 w-5 mr-3" />
+                    <a 
+                      href="https://twitter.com/dooor_ai" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-extralight hover:text-white transition-colors"
+                    >
+                      @dooor_ai
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
-            
+
+            {/* Company Info Section */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="space-y-12"
             >
-              <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="fullName"
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Enter your company"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="title" className="block text-sm font-medium text-gray-300 mb-2">
-                      Title
-                    </label>
-                    <input
-                      type="text"
-                      id="title"
-                      name="title"
-                      value={formData.title}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Your job title"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
-                      placeholder="Tell us about your needs..."
-                    ></textarea>
-                  </div>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    type="submit"
-                    className="w-full btn-primary text-white py-4 rounded-lg text-lg font-medium"
+              {/* Headquarters */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <div className="flex items-center mb-6">
+                  <MapPin className="h-6 w-6 text-white mr-3" />
+                  <h3 className="text-xl font-medium text-white">Our Headquarters</h3>
+                </div>
+                <div className="space-y-2 font-extralight text-gray-300">
+                  <p className="text-white font-medium">Dooor Labs, Inc.</p>
+                  <p>1111b South Governors Ave</p>
+                  <p>STE 29369</p>
+                  <p>Dover, DE 19904 US</p>
+                </div>
+              </div>
+
+              {/* Follow Journey */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <h3 className="text-xl font-medium text-white mb-6">Follow our Journey</h3>
+                <div className="space-y-4">
+                  <a 
+                    href="https://linkedin.com/company/dooor" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-400 hover:text-white transition-colors group"
                   >
-                    Submit Form
-                  </motion.button>
-                </form>
+                    <Linkedin className="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" />
+                    <span className="font-extralight">linkedin.com/company/dooor</span>
+                  </a>
+                  <a 
+                    href="https://twitter.com/dooor_ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-400 hover:text-white transition-colors group"
+                  >
+                    <Twitter className="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" />
+                    <span className="font-extralight">@dooor_ai</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Mission Statement */}
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <h3 className="text-xl font-medium text-white mb-4">Our Mission</h3>
+                <p className="text-gray-300 font-extralight leading-relaxed">
+                  We're building the infrastructure for a future where AI is not just powerful, 
+                  but verifiable, private, and truly owned by the organizations that depend on it. 
+                  Every partnership is a step toward that vision.
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
-        
-        {/* Floating background elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
       </section>
 
-      {/* Additional Info Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Bottom CTA */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">Let's Build the Future of Healthcare, Together</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our team is ready to help you transform your healthcare organization with cutting-edge AI solutions.
+            <h2 className="text-4xl lg:text-5xl font-extralight mb-6">
+              Ready to build the future of <span className="text-gray-400">AI together?</span>
+            </h2>
+            <p className="text-lg text-gray-400 font-extralight mb-8">
+              Let's start the conversation about how Verifiable AI can transform your organization.
             </p>
+            <motion.button
+              onClick={handleEmailContact}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
+            >
+              Start the Conversation
+            </motion.button>
           </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-gray-800 rounded-2xl p-8 text-center"
-            >
-              <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Clock className="h-8 w-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Quick Response</h3>
-              <p className="text-gray-300">
-                We respond to all inquiries within 24 hours during business days.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gray-800 rounded-2xl p-8 text-center"
-            >
-              <div className="bg-cyan-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Phone className="h-8 w-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Expert Consultation</h3>
-              <p className="text-gray-300">
-                Schedule a call with our healthcare AI specialists to discuss your needs.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-gray-800 rounded-2xl p-8 text-center"
-            >
-              <div className="bg-green-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Mail className="h-8 w-8 text-green-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Custom Solutions</h3>
-              <p className="text-gray-300">
-                Get a tailored demo and implementation plan for your organization.
-              </p>
-            </motion.div>
-          </div>
         </div>
       </section>
 

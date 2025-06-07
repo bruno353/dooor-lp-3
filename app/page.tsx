@@ -190,27 +190,27 @@ export default function Home() {
             </div>
             
             <h1 className="text-6xl lg:text-8xl font-inter font-extralight mb-8 leading-tight">
-              The technology behind{' '}
+              The OS for {' '}
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                advanced health systems
+              Verifiable AI
               </span>
             </h1>
             
             <p className="text-xl font-extralight lg:text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              We build software and AI experiences that simplify provider, administrator, and patient workflows, 
-              giving clinicians more time for what matters most - patient care.
+             The platform for enterprises to build and deploy Private, Ownable, and Auditable AI solutions.
+             We build software and AI experiences that simplify provider, administrator, and user workflows.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 font-inter">
               <motion.button
                 className="bg-white text-black px-6 py-2 rounded-full text-base  flex items-center justify-center hover:bg-gray-200 transition-all"
               >
-                Learn More
+                Let's Talk
               </motion.button>
               <motion.button
                 className="border border-white text-white px-6 py-2 rounded-full text-base  hover:bg-white hover:text-black transition-all"
               >
-                Contact Us
+                Explore
               </motion.button>
             </div>
             
@@ -273,7 +273,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-sm uppercase tracking-wide text-gray-600 mb-4">Trusted by leading healthcare institutions</p>
+            <p className="text-sm uppercase tracking-wide text-gray-600 mb-4">Trusted by leading institutions</p>
             <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
               <div className="text-2xl font-bold">Internet Computer Protocol</div>
               <div className="text-2xl font-bold">Akash Network</div>
@@ -296,11 +296,10 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
-              Healthcare shouldn't be this <span className="text-gray-400">complicated</span>
+              Using AI should not be this <span className="text-gray-400">complicated</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
-              Doctors spend 2-3 hours daily on documentation. Patients wait longer. Systems don't talk to each other. 
-              We're changing that.
+              The race to deploy AI is on, but for regulated industries, the most powerful models introduce unacceptable risks. The core challenge is clear.
             </p>
           </motion.div>
 
@@ -323,75 +322,216 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-extralight mb-6">The Documentation Burden</h3>
+              <h3 className="text-3xl font-extralight mb-6">The Privacy Burden</h3>
               <p className="text-lg text-gray-300 mb-8 font-extralight">
-                Healthcare professionals spend more time typing than treating. Our ambient AI captures conversations 
-                naturally, generating accurate clinical notes without disrupting the doctor-patient relationship.
+                How do you harness the power of AI without ceding control over your data, your security, and your reputation?
               </p>
               <div className="space-y-4 font-extralight">
                 <div className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>90%+ accuracy without training</span>
+                  <span>Data is your asset</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>Real-time Portuguese & English support</span>
+                  <span>Ownable & Verifiable</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>LGPD compliant by design</span>
+                  <span>LGPD & GDPR compliant by design</span>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Risk Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-24"
+          >
+            <div className="grid md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300"
+              >
+                <h4 className="text-xl font-medium mb-4 text-white">"Black Box" Risk</h4>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  Opaque AI models offer no way to prove the integrity of their outputs, creating massive operational and compliance vulnerabilities.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300"
+              >
+                <h4 className="text-xl font-medium mb-4 text-white">Data Sovereignty Leaks</h4>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  Centralized AI solutions often require sending your most sensitive data to third-party clouds, creating critical security risks and single points of failure.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300"
+              >
+                <h4 className="text-xl font-medium mb-4 text-white">The Auditability Gap</h4>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  Without a tamper-proof record of every AI decision, demonstrating compliance and tracing errors becomes a near-impossible task.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Solution Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-24 text-center"
+          >
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <h3 className="text-3xl font-extralight mb-6">Fragmented Care Coordination</h3>
-              <p className="text-lg text-gray-300 mb-8 font-extralight">
-                When systems don't communicate, patients suffer. Our unified platform connects EHRs, 
-                coordinates care teams, and provides real-time insights for better patient outcomes.
-              </p>
-              <div className="space-y-4 font-extralight">
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>Seamless EHR integration</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>Real-time care team updates</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-white mr-3" />
-                  <span>Predictive patient insights</span>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="order-1 lg:order-2"
+              className="max-w-4xl mx-auto mb-16 mt-52"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                alt="Healthcare team collaboration"
-                className="w-full rounded-2xl grayscale"
-              />
+              <h2 className="text-4xl lg:text-8xl font-extralight mb-8 text-transparent bg-gradient-to-b from-gray-100 to-gray-400/50 bg-clip-text">
+                From "Black Box" to <span className="">Verifiable AI</span>
+              </h2>
+              <div className="text-left bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
+                <p className="text-xl text-gray-300 font-extralight leading-relaxed">
+                  Dooor is the solution to the enterprise <strong className="text-white font-medium">AI dilemma</strong>. Our platform provides the essential infrastructure to build, deploy, and manage AI agents that are secure, compliant, and transparent by default.
+                </p>
+              </div>
+              
+              <h3 className="text-2xl lg:text-3xl font-extralight mb-12 text-center">
+                We deliver <strong className="text-white font-medium">Verifiable AI</strong> through three integrated pillars:
+              </h3>
             </motion.div>
-          </div>
+
+            <div className="grid lg:grid-cols-3 gap-8 text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+                }}
+                style={{
+                  background: `radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 70%)`
+                }}
+              >
+                {/* Mouse follower spotlight */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: `radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.1), transparent 60%)`
+                  }}
+                ></div>
+                
+                <div className="relative z-10">
+                  <div className="text-3xl font-extralight mb-6 text-white">1.</div>
+                  <h4 className="text-xl font-medium mb-4 text-white">Verifiable</h4>
+                  <p className="text-gray-400 font-extralight leading-relaxed">
+                    Use Zero-Knowledge Proofs to mathematically prove the integrity of any AI-generated result without exposing the sensitive source data. Trust is no longer a belief; it's a mathematical certainty.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+                }}
+                style={{
+                  background: `radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 70%)`
+                }}
+              >
+                {/* Mouse follower spotlight */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: `radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.1), transparent 60%)`
+                  }}
+                ></div>
+                
+                <div className="relative z-10">
+                  <div className="text-3xl font-extralight mb-6 text-white">2.</div>
+                  <h4 className="text-xl font-medium mb-4 text-white">Private & Ownable</h4>
+                  <p className="text-gray-400 font-extralight leading-relaxed">
+                    Maintain absolute sovereignty. With our decentralized architecture and self-hosted deployment options, your data and your AI models stay within your environment, under your control. Always.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+                }}
+                style={{
+                  background: `radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 70%)`
+                }}
+              >
+                {/* Mouse follower spotlight */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: `radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.1), transparent 60%)`
+                  }}
+                ></div>
+                
+                <div className="relative z-10">
+                  <div className="text-3xl font-extralight mb-6 text-white">3.</div>
+                  <h4 className="text-xl font-medium mb-4 text-white">Auditable</h4>
+                  <p className="text-gray-400 font-extralight leading-relaxed">
+                    Leverage immutable, blockchain-anchored logs to create a tamper-proof, time-stamped record of every AI action and data interaction, turning compliance from a challenge into a feature.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
         </div>
       </section>
 
       {/* Tech Stack */}
-      <section className="py-24 bg-black text-white relative">
+      <section className="py-24 !pt-0 bg-black text-white relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -400,8 +540,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl lg:text-9xl font-extralight mb-8">
-              <span className="text-transparent bg-gradient-to-b from-gray-400 to-gray-400/20 bg-clip-text">Our Tech Stack</span>
+            <h2 className="text-5xl lg:text-8xl font-extralight mb-8">
+              <span className="text-transparent bg-gradient-to-b from-gray-100 to-gray-400/20 bg-clip-text">Our Tech Stack</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
               Built with cutting-edge technology and enterprise-grade infrastructure designed for healthcare excellence.
@@ -749,7 +889,7 @@ export default function Home() {
               </motion.div> */}
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
+                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
                 // whileHover={{ y: -10 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -788,7 +928,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
+                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
                 // whileHover={{ y: -10 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -827,7 +967,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
+                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
                 // whileHover={{ y: -10 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -866,7 +1006,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
+                className="flex-shrink-0  rounded-3xl p-12  w-[55vw]"
                 // whileHover={{ y: -10 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -905,7 +1045,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
+                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
                 // whileHover={{ y: -10 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
@@ -935,7 +1075,7 @@ export default function Home() {
                   </div>
                   <div className="order-1 lg:order-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1592323401640-9c24ed330baf?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://images.unsplash.com/photo-1592323401640-9c24ed33e561?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Patient Engagement Platform"
                       className="w-full h-80 lg:h-96 object-cover rounded-3xl grayscale"
                     />
@@ -974,11 +1114,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl pb-2 text-transparent bg-gradient-to-b from-gray-400 to-gray-400/20 bg-clip-text lg:text-9xl font-extralight mb-8">
-              Built on <span className="">enterprise-grade</span> technology
+            <h2 className="text-5xl pb-2 text-transparent bg-gradient-to-b from-gray-100 to-gray-400/20 bg-clip-text lg:text-8xl font-extralight mb-8">
+               Purpose-Built Solutions for High-Stakes Industries
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
-              Security, compliance, and performance at the core of everything we build.
+            Generic AI fails when trust is paramount. We partner with industry leaders to co-develop bespoke solutions on our Verifiable AI platform, solving their most critical and complex challenges.
             </p>
           </motion.div>
 
@@ -1025,31 +1165,162 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <Globe className="h-6 w-6 text-white mr-3" />
-                  <h4 className="text-lg font-extralight">Multi-Language AI Models</h4>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
+                <div className="flex items-center mb-6">
+                  {/* <Globe className="h-6 w-6 text-white mr-3" /> */}
+                  <h4 className="text-lg font-extralight">GOVERNMENT</h4>
                 </div>
-                <p className="text-gray-400 font-extralight">Native Portuguese and English support with medical terminology recognition.</p>
+                {/* Tag in top-right corner */}
+                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
+                  <span className="text-xs font-extralight text-gray-300">The Framework for Trusted Public Sector AI</span>
+                </div>
+                <p className="text-gray-400 font-extralight">Build secure, transparent, and accountable AI solutions for public services, from intelligence analysis to citizen engagement, while upholding the highest standards of data sovereignty.</p>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <Database className="h-6 w-6 text-white mr-3" />
-                  <h4 className="text-lg font-extralight">EHR Integration</h4>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
+                <div className="flex items-center mb-6">
+                  {/* <Heart className="h-6 w-6 text-white mr-3" /> */}
+                  <h4 className="text-lg font-extralight">HEALTHCARE</h4>
                 </div>
-                <p className="text-gray-400 font-extralight">Seamless integration with Tasy, MV Soul, Philips Tasy, and other major Brazilian EHR systems.</p>
+                {/* Tag in top-right corner */}
+                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
+                  <span className="text-xs font-extralight text-gray-300">The OS for the Modern Health System</span>
+                </div>
+                <p className="text-gray-400 font-extralight">Empower your clinicians and streamline operations. Our solutions automate clinical documentation to reduce physician burnout, enhance provider-payer synergy, and build a secure data backbone for advanced medical research.</p>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <Clock className="h-6 w-6 text-white mr-3" />
-                  <h4 className="text-lg font-extralight">Rapid Deployment</h4>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
+                <div className="flex items-center mb-6">
+                  {/* <Database className="h-6 w-6 text-white mr-3" /> */}
+                  <h4 className="text-lg font-extralight">FINANCE</h4>
                 </div>
-                <p className="text-gray-400 font-extralight">Full implementation in 48 hours with minimal IT infrastructure requirements.</p>
+                {/* Tag in top-right corner */}
+                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
+                  <span className="text-xs font-extralight text-gray-300">The Engine for Secure Financial Intelligence</span>
+                </div>
+                <p className="text-gray-400 font-extralight">Deploy AI agents for fraud detection, algorithmic trading, and risk analysis with mathematical proof of operational integrity and data privacy.</p>
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Strategic Capabilities Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl lg:text-6xl font-extralight mb-8 leading-tight">
+              We Don't Sell Products. <br />
+              <span className="text-gray-400">We Build Strategic Capabilities.</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto font-extralight leading-relaxed">
+              We believe the most powerful solutions are built in partnership. Our co-development model embeds our team of elite AI architects and engineers with yours, ensuring the final capability is perfectly tailored to solve your core challenges.
+            </p>
+          </motion.div>
+
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Left Side - Image Collage */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                    alt="Team collaboration"
+                    className="w-full h-48 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Strategic planning"
+                    className="w-full h-32 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="space-y-4 pt-8">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="Engineering team"
+                    className="w-full h-32 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
+                    alt="Partnership meeting"
+                    className="w-full h-48 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+              </div>
+              
+              {/* Floating accent element */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/5 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/3 rounded-full blur-2xl"></div>
+            </motion.div>
+
+            {/* Right Side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 relative group hover:border-white/20 transition-all duration-300">
+                <div className="absolute top-6 right-6 w-2 h-2 bg-white rounded-full opacity-60"></div>
+                <h3 className="text-xl font-medium mb-4 text-white">Dedicated Pods</h3>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  A dedicated team of Dooor's Forward Deployed Engineers and AI Scientists works as an extension of your organization.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 relative group hover:border-white/20 transition-all duration-300">
+                <div className="absolute top-6 right-6 w-2 h-2 bg-white rounded-full opacity-60"></div>
+                <h3 className="text-xl font-medium mb-4 text-white">Mission-Aligned KPIs</h3>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  Success is defined from day one by measurable business outcomes, not software licenses. Our success is your success.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 relative group hover:border-white/20 transition-all duration-300">
+                <div className="absolute top-6 right-6 w-2 h-2 bg-white rounded-full opacity-60"></div>
+                <h3 className="text-xl font-medium mb-4 text-white">Mutual Investment</h3>
+                <p className="text-gray-400 font-extralight leading-relaxed">
+                  We structure our partnerships as a shared investment in a common vision, creating a foundation for lasting strategic advantage.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Stats/Metrics */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8 pt-16 border-t border-white/10"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-extralight mb-2 text-white">6-12</div>
+              <div className="text-gray-400 font-extralight">Month Partnership Cycles</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-extralight mb-2 text-white">100%</div>
+              <div className="text-gray-400 font-extralight">Outcome-Based Success</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-extralight mb-2 text-white">24/7</div>
+              <div className="text-gray-400 font-extralight">Dedicated Support</div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -1065,10 +1336,10 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
-              Ready to transform your <span className="text-gray-400">healthcare organization?</span>
+              Build Your Future on  <span className="text-gray-400">Verifiable AI</span>
             </h2>
             <p className="text-xl font-extralight text-gray-400 mb-12 max-w-2xl mx-auto">
-              Join leading Brazilian healthcare institutions that have already revolutionized their clinical workflows with Dooor.
+              Let's explore how the Dooor OS can become the engine for your organization's most ambitious goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.button
