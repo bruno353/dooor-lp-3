@@ -40,7 +40,7 @@ export default function Company() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background Video */}
         <div className="absolute opacity-100 inset-0" style={{ zIndex: 2 }}>
           <video
@@ -62,18 +62,18 @@ export default function Company() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h1 className="text-4xl lg:text-8xl font-extralight mb-12 leading-tight text-transparent bg-gradient-to-b from-gray-100 to-gray-400/50 bg-clip-text">
+            <h1 className="text-3xl md:text-4xl lg:text-8xl font-extralight mb-8 md:mb-12 leading-tight text-transparent bg-gradient-to-b from-gray-100 to-gray-400/50 bg-clip-text">
               The Company Building the Future of{' '}
               <span className="text-gray-400">Verifiable AI</span>
             </h1>
             
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl lg:text-4xl font-extralight mb-8 text-white">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-extralight mb-6 md:mb-8 text-white">
                 We are building the infrastructure for the next generation of AI.
               </h2>
               
-              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10 text-left">
-                <blockquote className="text-xl lg:text-2xl font-extralight text-gray-300 leading-relaxed italic">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 border border-white/10 text-left">
+                <blockquote className="text-lg md:text-xl lg:text-2xl font-extralight text-gray-300 leading-relaxed italic">
                   "The power of artificial intelligence will redefine every industry. But this power demands a new foundation—one built not on hype, but on mathematical proof, data sovereignty, and unwavering trust. At Dooor, our single focus is to build this foundation."
                 </blockquote>
               </div>

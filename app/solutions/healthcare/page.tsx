@@ -292,20 +292,23 @@ export default function HealthcarePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 relative overflow-hidden group"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 relative overflow-hidden group flex flex-col h-full"
             >
-              <div className="absolute top-6 right-6 bg-blue-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
-                <span className="text-xs font-extralight text-gray-300">AI Scribe & Clinical Assistant</span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                <h3 className="text-3xl lg:text-4xl font-medium text-white mb-2 md:mb-0">Kenna™</h3>
+                {/* Tag positioned below title on mobile, top-right on desktop */}
+                <div className="bg-blue-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 self-start md:self-auto">
+                  <span className="text-xs font-extralight text-gray-300">AI Scribe & Clinical Assistant</span>
+                </div>
               </div>
               
               <div className="mb-8">
-                <h3 className="text-3xl lg:text-4xl font-medium text-white mb-4">Kenna™</h3>
                 <p className="text-lg font-extralight text-gray-300 leading-relaxed mb-6">
                   <strong className="text-white">Kenna</strong> restores the human connection in healthcare. It is our ambient AI solution designed to understand the nuanced doctor-patient conversation, instantly liberating physicians from administrative work.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 flex-grow">
                 <div>
                   <h4 className="text-white font-medium mb-2">Solves:</h4>
                   <p className="text-gray-400 font-extralight">The critical problem of physician burnout.</p>
@@ -335,20 +338,23 @@ export default function HealthcarePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 relative overflow-hidden group"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 relative overflow-hidden group flex flex-col h-full"
             >
-              <div className="absolute top-6 right-6 bg-green-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
-                <span className="text-xs font-extralight text-gray-300">Verifiable Claims & Integrity Engine</span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                <h3 className="text-3xl lg:text-4xl font-medium text-white mb-2 md:mb-0">Veris™</h3>
+                {/* Tag positioned below title on mobile, top-right on desktop */}
+                <div className="bg-green-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 self-start md:self-auto">
+                  <span className="text-xs font-extralight text-gray-300">Verifiable Claims & Integrity Engine</span>
+                </div>
               </div>
               
               <div className="mb-8">
-                <h3 className="text-3xl lg:text-4xl font-medium text-white mb-4">Veris™</h3>
                 <p className="text-lg font-extralight text-gray-300 leading-relaxed mb-6">
                   <strong className="text-white">Veris</strong> secures the financial and administrative backbone of your health system. It acts as a system-level integrity engine, using the trusted data captured by Kenna to create a single, immutable source of truth.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 flex-grow">
                 <div>
                   <h4 className="text-white font-medium mb-2">Solves:</h4>
                   <p className="text-gray-400 font-extralight">Provider-payer friction, revenue cycle delays, and fraud risk.</p>

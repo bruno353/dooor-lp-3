@@ -399,16 +399,16 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-24 text-center"
+            className="mb-32 md:mb-24 text-center"
           >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto mb-16 mt-52"
+              className="max-w-4xl mx-auto mb-16 mt-16 md:mt-52"
             >
-              <h2 className="text-4xl lg:text-8xl font-extralight mb-8 text-transparent bg-gradient-to-b from-gray-100 to-gray-400/50 bg-clip-text">
+              <h2 className="text-4xl lg:text-8xl font-extralight mb-20 text-transparent bg-gradient-to-b from-gray-100 to-gray-400/50 bg-clip-text">
                 From "Black Box" to <span className="">Verifiable AI</span>
               </h2>
               <div className="text-left bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
@@ -540,7 +540,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl lg:text-8xl font-extralight mb-8">
+            <h2 className="text-5xl lg:text-8xl font-extralight mb-12">
               <span className="text-transparent bg-gradient-to-b from-gray-100 to-gray-400/20 bg-clip-text">Our Tech Stack</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-extralight">
@@ -549,7 +549,7 @@ export default function Home() {
           </motion.div>
 
           {/* Clean 4x4 Square Grid Layout */}
-          <div className="grid grid-cols-4 grid-rows-4 gap-6 aspect-square w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-8 md:grid-rows-4 gap-4 md:gap-6 aspect-auto md:aspect-square w-full max-w-4xl mx-auto">
             
             {/* AI Core Engine - Large Card (2x2) */}
             <motion.div
@@ -558,7 +558,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="col-span-2 row-span-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 relative overflow-hidden group"
+              className="col-span-2 row-span-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -571,16 +571,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col">
-                <h3 className="text-3xl font-extralight mb-4 text-white">AI Core Engine</h3>
-                <p className="text-gray-200 text-base font-extralight mb-6 flex-grow">
+                <h3 className="text-2xl md:text-3xl font-extralight mb-3 md:mb-4 text-white">AI Core Engine</h3>
+                <p className="text-gray-200 text-sm md:text-base font-extralight mb-4 md:mb-6 flex-grow">
                   Advanced neural networks with multi-language processing for medical documentation.
                 </p>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
+                <div className="space-y-2 md:space-y-3">
+                  <div className="flex justify-between text-xs md:text-sm">
                     <span className="text-gray-300">Model Accuracy</span>
                     <span className="text-white font-medium">94.7%</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-xs md:text-sm">
                     <span className="text-gray-300">Processing Speed</span>
                     <span className="text-white font-medium">&lt; 200ms</span>
                   </div>
@@ -595,12 +595,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="col-span-1 row-span-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 relative overflow-hidden group"
+              className="col-span-1 row-span-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')`,
+                  backgroundImage: `url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -608,11 +608,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col">
-                <h3 className="text-xl font-extralight mb-4 text-white">TEE Security</h3>
-                <p className="text-gray-200 text-sm font-extralight mb-6 flex-grow">
+                <h3 className="text-lg md:text-xl font-extralight mb-3 md:mb-4 text-white">TEE Security</h3>
+                <p className="text-gray-200 text-xs md:text-sm font-extralight mb-4 md:mb-6 flex-grow">
                   Hardware-level isolation for sensitive healthcare data processing.
                 </p>
-                <div className="space-y-2 text-xs">
+                <div className="space-y-1 md:space-y-2 text-xs">
                   <div className="text-gray-300">• End-to-end encryption</div>
                   <div className="text-gray-300">• LGPD compliant</div>
                   <div className="text-gray-300">• Zero-knowledge</div>
@@ -627,7 +627,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/20 relative overflow-hidden group"
+              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -640,7 +640,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col justify-center text-center">
-                <h3 className="text-lg font-extralight text-white mb-2">Cloud Native</h3>
+                <h3 className="text-base md:text-lg font-extralight text-white mb-1 md:mb-2">Cloud Native</h3>
                 <p className="text-gray-200 text-xs font-extralight">Kubernetes & Auto-scaling</p>
               </div>
             </motion.div>
@@ -652,7 +652,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/20 relative overflow-hidden group"
+              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -665,7 +665,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col justify-center text-center">
-                <h3 className="text-lg font-extralight text-white mb-2">Vector DB</h3>
+                <h3 className="text-base md:text-lg font-extralight text-white mb-1 md:mb-2">Vector DB</h3>
                 <p className="text-gray-200 text-xs font-extralight">&lt; 50ms search</p>
               </div>
             </motion.div>
@@ -677,7 +677,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 relative overflow-hidden group"
+              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -691,11 +691,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 flex items-center justify-between h-full">
                 <div>
-                  <h3 className="text-xl font-extralight text-white mb-2">API Gateway</h3>
-                  <p className="text-gray-200 text-sm font-extralight">RESTful, GraphQL & WebSocket endpoints</p>
+                  <h3 className="text-lg md:text-xl font-extralight text-white mb-1 md:mb-2">API Gateway</h3>
+                  <p className="text-gray-200 text-xs md:text-sm font-extralight">RESTful, GraphQL & WebSocket endpoints</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-white font-medium text-sm">Rate Limited</div>
+                  <div className="text-white font-medium text-xs md:text-sm">Rate Limited</div>
                   <div className="text-gray-300 text-xs">Auto Throttling</div>
                 </div>
               </div>
@@ -708,7 +708,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 relative overflow-hidden group"
+              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -722,11 +722,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 flex items-center justify-between h-full">
                 <div>
-                  <h3 className="text-xl font-extralight text-white mb-2">Observability</h3>
-                  <p className="text-gray-200 text-sm font-extralight">24/7 monitoring with real-time alerts</p>
+                  <h3 className="text-lg md:text-xl font-extralight text-white mb-1 md:mb-2">Observability</h3>
+                  <p className="text-gray-200 text-xs md:text-sm font-extralight">24/7 monitoring with real-time alerts</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-white font-medium text-sm">99.9% Uptime</div>
+                  <div className="text-white font-medium text-xs md:text-sm">99.9% Uptime</div>
                   <div className="text-gray-300 text-xs">Real-time Metrics</div>
                 </div>
               </div>
@@ -739,7 +739,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 relative overflow-hidden group"
+              className="col-span-2 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -753,11 +753,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 flex items-center justify-between h-full">
                 <div>
-                  <h3 className="text-xl font-extralight text-white mb-2">EHR Integration</h3>
-                  <p className="text-gray-200 text-sm font-extralight">Integrate with your existing EHR system</p>
+                  <h3 className="text-lg md:text-xl font-extralight text-white mb-1 md:mb-2">EHR Integration</h3>
+                  <p className="text-gray-200 text-xs md:text-sm font-extralight">Integrate with your existing EHR system</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-white font-medium text-sm">99.9% Uptime</div>
+                  <div className="text-white font-medium text-xs md:text-sm">99.9% Uptime</div>
                   <div className="text-gray-300 text-xs">Real-time Metrics</div>
                 </div>
               </div>
@@ -770,7 +770,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/20 relative overflow-hidden group"
+              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -783,7 +783,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col justify-center text-center">
-                <h3 className="text-lg font-extralight text-white mb-2">ML Pipeline</h3>
+                <h3 className="text-base md:text-lg font-extralight text-white mb-1 md:mb-2">ML Pipeline</h3>
                 <p className="text-gray-200 text-xs font-extralight">Real-time inference</p>
               </div>
             </motion.div>
@@ -795,7 +795,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/20 relative overflow-hidden group"
+              className="col-span-1 row-span-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-white/20 relative overflow-hidden group"
             >
               <div 
                 className="absolute inset-0 rounded-2xl"
@@ -808,7 +808,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/85 rounded-2xl"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 h-full flex flex-col justify-center text-center">
-                <h3 className="text-lg font-extralight text-white mb-2">DevOps</h3>
+                <h3 className="text-base md:text-lg font-extralight text-white mb-1 md:mb-2">DevOps</h3>
                 <p className="text-gray-200 text-xs font-extralight">CI/CD Pipeline</p>
               </div>
             </motion.div>
@@ -822,7 +822,8 @@ export default function Home() {
         ref={carouselSectionRef}
         className="relative bg-black py-24"
       >
-        <div className="w-full h-screen flex flex-col overflow-hidden">
+        {/* Desktop Version - Horizontal Scroll */}
+        <div className="hidden lg:block w-full h-screen flex flex-col overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -849,48 +850,8 @@ export default function Home() {
               className="flex space-x-8 h-full items-center pl-40 pr-8"
             >
               {/* Products with improved layout */}
-              {/* <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 border border-white/10 w-[55vw]"
-                // whileHover={{ y: -10 }}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-                  <div className="order-2 lg:order-1">
-                    <div className="bg-white/20 text-white px-6 py-3 rounded-full text-base font-medium inline-block mb-8">
-                      TELEMEDICINE
-                    </div>
-                    <h3 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">Dooor Telehealth Platform</h3>
-                    <p className="text-gray-300 text-xl leading-relaxed mb-8">
-                      Secure video consultations with integrated AI documentation and real-time patient monitoring capabilities. 
-                      Experience the future of remote healthcare with our comprehensive telemedicine solution.
-                    </p>
-                    <div className="space-y-4">
-                      <div className="flex items-center text-gray-300">
-                        <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">End-to-end encrypted video calls</span>
-                      </div>
-                      <div className="flex items-center text-gray-300">
-                        <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Real-time AI documentation</span>
-                      </div>
-                      <div className="flex items-center text-gray-300">
-                        <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Integrated patient monitoring</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <img 
-                      src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                      alt="Telemedicine App Interface"
-                      className="w-full h-80 lg:h-96 object-cover rounded-3xl grayscale"
-                    />
-                  </div>
-                </div>
-              </motion.div> */}
-
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
-                // whileHover={{ y: -10 }}
+                className="flex-shrink-0 rounded-3xl p-12 w-[55vw]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
@@ -928,8 +889,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
-                // whileHover={{ y: -10 }}
+                className="flex-shrink-0 rounded-3xl p-12 w-[55vw]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
@@ -967,8 +927,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
-                // whileHover={{ y: -10 }}
+                className="flex-shrink-0 rounded-3xl p-12 w-[55vw]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
@@ -1006,8 +965,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12  w-[55vw]"
-                // whileHover={{ y: -10 }}
+                className="flex-shrink-0 rounded-3xl p-12 w-[55vw]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
@@ -1045,8 +1003,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div 
-                className="flex-shrink-0  rounded-3xl p-12 w-[55vw]"
-                // whileHover={{ y: -10 }}
+                className="flex-shrink-0 rounded-3xl p-12 w-[55vw]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
@@ -1075,7 +1032,7 @@ export default function Home() {
                   </div>
                   <div className="order-1 lg:order-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1592323401640-9c24ed33e561?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Patient Engagement Platform"
                       className="w-full h-80 lg:h-96 object-cover rounded-3xl grayscale"
                     />
@@ -1085,7 +1042,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Call to Action */}
+          {/* Call to Action - Desktop */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1099,6 +1056,234 @@ export default function Home() {
               className="bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-200 transition-all inline-flex items-center"
             >
               Explore All Products <ArrowRight className="h-5 w-5 ml-2" />
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* Mobile Version - Vertical Layout */}
+        <div className="lg:hidden max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-extralight mb-6">
+              Discover our <span className="text-gray-400">product ecosystem</span>
+            </h2>
+            <p className="text-lg text-gray-400 font-extralight">
+              Explore our suite of healthcare applications designed to revolutionize medical workflows.
+            </p>
+          </motion.div>
+
+          {/* Mobile Product Cards - Vertical Stack */}
+          <div className="space-y-12">
+            {/* Analytics Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Clinical Dashboard Interface"
+                  className="w-full h-48 object-cover rounded-xl grayscale"
+                />
+              </div>
+              <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
+                ANALYTICS
+              </div>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Clinical Analytics Dashboard</h3>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
+                Real-time insights and predictive analytics for better clinical decision-making and operational efficiency.
+              </p>
+              <div className="space-y-3 font-extralight">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Real-time performance metrics</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Predictive patient analytics</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Operational efficiency insights</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Mobile Health Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1663153203126-08bbadc178ad?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Mobile Health App"
+                  className="w-full h-48 object-cover rounded-xl grayscale"
+                />
+              </div>
+              <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
+                MOBILE
+              </div>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Dooor Mobile Health</h3>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
+                Comprehensive mobile health monitoring with AI-driven symptom tracking and medication management.
+              </p>
+              <div className="space-y-3 font-extralight">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">AI-powered symptom tracking</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Smart medication reminders</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">24/7 health monitoring</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* EHR Integration Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                  alt="Medical Records System"
+                  className="w-full h-48 object-cover rounded-xl grayscale"
+                />
+              </div>
+              <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
+                EHR INTEGRATION
+              </div>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Smart EHR Connector</h3>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
+                Seamless integration with major Brazilian EHR systems including Tasy, MV Soul, and Philips Tasy.
+              </p>
+              <div className="space-y-3 font-extralight">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Universal EHR compatibility</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Real-time data synchronization</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Secure data transfer protocols</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Voice AI Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="AI Voice Documentation"
+                  className="w-full h-48 object-cover rounded-xl grayscale"
+                />
+              </div>
+              <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
+                VOICE AI
+              </div>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Ambient Voice Assistant</h3>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
+                Hands-free clinical documentation with natural language processing in Portuguese and English.
+              </p>
+              <div className="space-y-3 font-extralight">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Natural language processing</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Multi-language support</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Hands-free operation</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Patient Experience Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Patient Engagement Platform"
+                  className="w-full h-48 object-cover rounded-xl grayscale"
+                />
+              </div>
+              <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
+                ENGAGEMENT
+              </div>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Patient Experience Hub</h3>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
+                Omnichannel patient engagement with AI-powered appointment scheduling and care coordination.
+              </p>
+              <div className="space-y-3 font-extralight">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Omnichannel communication</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">AI-powered scheduling</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-white mr-3" />
+                  <span className="text-sm">Care coordination platform</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Call to Action - Mobile */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-black px-6 py-3 rounded-full text-base font-medium hover:bg-gray-200 transition-all inline-flex items-center"
+            >
+              Explore All Products <ArrowRight className="h-4 w-4 ml-2" />
             </motion.button>
           </motion.div>
         </div>
@@ -1166,37 +1351,34 @@ export default function Home() {
               className="space-y-8"
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
-                <div className="flex items-center mb-6">
-                  {/* <Globe className="h-6 w-6 text-white mr-3" /> */}
-                  <h4 className="text-lg font-extralight">GOVERNMENT</h4>
-                </div>
-                {/* Tag in top-right corner */}
-                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
-                  <span className="text-xs font-extralight text-gray-300">The Framework for Trusted Public Sector AI</span>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                  <h4 className="text-lg font-extralight mb-2 md:mb-0">GOVERNMENT</h4>
+                  {/* Tag positioned below title on mobile, top-right on desktop */}
+                  <div className="bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 self-start md:self-auto">
+                    <span className="text-xs font-extralight text-gray-300">The Framework for Trusted Public Sector AI</span>
+                  </div>
                 </div>
                 <p className="text-gray-400 font-extralight">Build secure, transparent, and accountable AI solutions for public services, from intelligence analysis to citizen engagement, while upholding the highest standards of data sovereignty.</p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
-                <div className="flex items-center mb-6">
-                  {/* <Heart className="h-6 w-6 text-white mr-3" /> */}
-                  <h4 className="text-lg font-extralight">HEALTHCARE</h4>
-                </div>
-                {/* Tag in top-right corner */}
-                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
-                  <span className="text-xs font-extralight text-gray-300">The OS for the Modern Health System</span>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                  <h4 className="text-lg font-extralight mb-2 md:mb-0">HEALTHCARE</h4>
+                  {/* Tag positioned below title on mobile, top-right on desktop */}
+                  <div className="bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 self-start md:self-auto">
+                    <span className="text-xs font-extralight text-gray-300">The OS for the Modern Health System</span>
+                  </div>
                 </div>
                 <p className="text-gray-400 font-extralight">Empower your clinicians and streamline operations. Our solutions automate clinical documentation to reduce physician burnout, enhance provider-payer synergy, and build a secure data backbone for advanced medical research.</p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 relative">
-                <div className="flex items-center mb-6">
-                  {/* <Database className="h-6 w-6 text-white mr-3" /> */}
-                  <h4 className="text-lg font-extralight">FINANCE</h4>
-                </div>
-                {/* Tag in top-right corner */}
-                <div className="absolute top-4 right-4 bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
-                  <span className="text-xs font-extralight text-gray-300">The Engine for Secure Financial Intelligence</span>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                  <h4 className="text-lg font-extralight mb-2 md:mb-0">FINANCE</h4>
+                  {/* Tag positioned below title on mobile, top-right on desktop */}
+                  <div className="bg-sky-500/20 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 self-start md:self-auto">
+                    <span className="text-xs font-extralight text-gray-300">The Engine for Secure Financial Intelligence</span>
+                  </div>
                 </div>
                 <p className="text-gray-400 font-extralight">Deploy AI agents for fraud detection, algorithmic trading, and risk analysis with mathematical proof of operational integrity and data privacy.</p>
               </div>
