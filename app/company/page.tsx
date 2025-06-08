@@ -33,7 +33,7 @@ export default function Company() {
       <BlobAnimation 
         opacity={0.3} 
         zIndex={1} 
-        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none" 
         color="white" 
       />
       
@@ -199,7 +199,7 @@ export default function Company() {
       </section>
 
       {/* The Team */}
-      <section className="py-24 relative">
+      <section className="lg:py-24 py-6 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -351,7 +351,7 @@ export default function Company() {
       </section>
 
       {/* Careers */}
-      <section className="py-24 relative">
+      <section className="lg:py-24 py-6 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

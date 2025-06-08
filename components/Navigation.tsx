@@ -32,11 +32,11 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-11 h-16">
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/partnerships" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+              <Link href="/partnerships" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
                 Partnerships
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/company" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+              <Link href="/company" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
                 Company
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
@@ -45,7 +45,7 @@ const Navigation = () => {
                 onMouseEnter={() => setIsSolutionsOpen(true)}
                 onMouseLeave={() => setIsSolutionsOpen(false)}
               >
-                <div className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full cursor-pointer">
+                <div className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full cursor-pointer">
                   Solutions
                 </div>
                 
@@ -107,7 +107,7 @@ const Navigation = () => {
                 </AnimatePresence>
               </div>
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/contact" className="text-white hover:text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+              <Link href="/contact" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
                 Contact
               </Link>
               <div className="w-px bg-white/30 h-full"></div>

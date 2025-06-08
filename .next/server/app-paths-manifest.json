@@ -1,8 +1,9 @@
 {
-  "/contact/page": "app/contact/page.js",
   "/company/page": "app/company/page.js",
-  "/not-found": "app/not-found.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
   "/partnerships/page": "app/partnerships/page.js",
-  "/page": "app/page.js",
-  "/solutions/healthcare/page": "app/solutions/healthcare/page.js"
+  "/terms/page": "app/terms/page.js",
+  "/solutions/healthcare/page": "app/solutions/healthcare/page.js",
+  "/community/page": "app/community/page.js",
+  "/page": "app/page.js"
 }

@@ -257,10 +257,14 @@ export default function AmbientAI() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium">
+                <a href="/contact">
                 Schedule Demo
+                </a>
               </button>
               <button className="border border-gray-400 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
+                <a href="/contact">
                 Contact Sales
+                </a>
               </button>
             </div>
           </motion.div>

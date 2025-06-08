@@ -35,6 +35,17 @@ export default function Home() {
     '/49815-458438877_small.mp4'
   ]
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   // Handle video end and rotation
   const handleVideoEnd = () => {
     if (!isSwitchingRef.current) {
@@ -150,18 +161,18 @@ export default function Home() {
   
   return (
     <div className="min-h-screen bg-black text-white relative">
-      {/* Global Blob Animation Background */}
+      {/* Global Blob Animation Background - Hidden on mobile, shown on desktop */}
       <BlobAnimation 
         opacity={0.3} 
         zIndex={1} 
-        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none" 
         color="white" 
       />
       
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background Video */}
         <div className="absolute opacity-60 inset-0" style={{ zIndex: 2 }}>
           <video
@@ -185,45 +196,47 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8">
+            <div className="inline-flex items-center mt-12 lg:mt-0 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8">
               <span className="text-sm font-medium">Transforming Industries with AI</span>
             </div>
             
-            <h1 className="text-6xl lg:text-8xl font-inter font-extralight mb-8 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-inter font-extralight mb-8 leading-tight">
               The OS for {' '}
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               Verifiable AI
               </span>
             </h1>
             
-            <p className="text-xl font-extralight lg:text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl font-extralight lg:text-xl text-gray-300 mb-12 md:mb-12 max-w-4xl mx-auto">
              The platform for enterprises to build and deploy Private, Ownable, and Auditable AI solutions.
-             We build software and AI experiences that simplify provider, administrator, and user workflows.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 font-inter">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 md:mb-16 font-inter">
               <motion.button
-                className="bg-white text-black px-6 py-2 rounded-full text-base  flex items-center justify-center hover:bg-gray-200 transition-all"
+                className="bg-white text-black px-6 w-fit mx-auto lg:mx-0 py-2 rounded-full text-base flex items-center justify-center hover:bg-gray-200 transition-all"
+                onClick={() => scrollToSection('problems-section')}
               >
-                Let's Talk
+                Discover Our Solutions
               </motion.button>
               <motion.button
-                className="border border-white text-white px-6 py-2 rounded-full text-base  hover:bg-white hover:text-black transition-all"
+                className="border border-white text-white px-6 w-fit mx-auto lg:mx-0 py-2 rounded-full text-base hover:bg-white hover:text-black transition-all"
               >
-                Explore
+                <a href="/contact">
+                  View Demo
+                </a>
               </motion.button>
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-12 max-w-2xl mx-auto mb-8 md:mb-0">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal mb-2">90%+</div>
-                <div className="text-gray-400 font-extralight">Documentation Accuracy</div>
+                <div className="text-3xl md:text-4xl font-normal mb-2">90%+</div>
+                <div className="text-gray-400 font-extralight text-sm md:text-base">Documentation Accuracy</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -231,8 +244,8 @@ export default function Home() {
                 transition={{ delay: 0.7, duration: 0.6 }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal mb-2">2-3h</div>
-                <div className="text-gray-400 font-extralight">Time Saved Daily</div>
+                <div className="text-3xl md:text-4xl font-normal mb-2">2-3h</div>
+                <div className="text-gray-400 font-extralight text-sm md:text-base">Time Saved Daily</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -240,8 +253,8 @@ export default function Home() {
                 transition={{ delay: 0.9, duration: 0.6 }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal mb-2">48h</div>
-                <div className="text-gray-400 font-extralight">Implementation Time</div>
+                <div className="text-3xl md:text-4xl font-normal mb-2">48h</div>
+                <div className="text-gray-400 font-extralight text-sm md:text-base">Implementation Time</div>
               </motion.div>
             </div>
           </motion.div>
@@ -252,7 +265,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute hidden lg:block bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -286,7 +299,7 @@ export default function Home() {
       </section>
 
       {/* Problems We Solve */}
-      <section className="py-24 bg-black relative">
+      <section id="problems-section" className="py-24 bg-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -399,7 +412,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-32 md:mb-24 text-center"
+            className="mb-0 md:mb-24 text-center"
           >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -531,7 +544,7 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-24 !pt-0 bg-black text-white relative">
+      <section className="py-24 pt-4 bg-black text-white relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -744,7 +757,7 @@ export default function Home() {
               <div 
                 className="absolute inset-0 rounded-2xl"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')`,
+                  backgroundImage: `url('https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -775,7 +788,7 @@ export default function Home() {
               <div 
                 className="absolute inset-0 rounded-2xl"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3')`,
+                  backgroundImage: `url('https://images.unsplash.com/photo-1545987796-200677ee1011?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -820,7 +833,7 @@ export default function Home() {
       {/* Product Showcase Carousel */}
       <section 
         ref={carouselSectionRef}
-        className="relative bg-black py-24"
+        className="relative bg-black py-6 lg:py-24"
       >
         {/* Desktop Version - Horizontal Scroll */}
         <div className="hidden lg:block w-full h-screen flex flex-col overflow-hidden">
@@ -856,17 +869,17 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
                     <div className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-extralight inline-block mb-8">
-                      ANALYTICS
+                      AI Scribe & Clinical Assistant
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Clinical Analytics Dashboard</h3>
-                    <p className="text-gray-300 text-xl leading-relaxed mb-8 font-extralight">
-                      Real-time insights and predictive analytics for better clinical decision-making and operational efficiency.
-                      Transform your healthcare data into actionable intelligence.
+                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Kenna</h3>
+                    <p className="text-gray-300 text-xl leading-relaxed mb-4 font-extralight">
+                     
+                     It is our ambient AI solution designed to understand the nuanced doctor-patient conversation, instantly liberating physicians from administrative work.
                     </p>
                     <div className="space-y-4 font-extralight">
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Real-time performance metrics</span>
+                        <span className="text-lg">Automatically generates structured, CFM-compliant clinical notes in real-time.</span>
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
@@ -874,7 +887,7 @@ export default function Home() {
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Operational efficiency insights</span>
+                        <span className="text-lg">Operational efficiency: Gives hours back to physicians</span>
                       </div>
                     </div>
                   </div>
@@ -894,25 +907,25 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
                     <div className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-extralight inline-block mb-8">
-                      MOBILE
+                      Verifiable Claims & Integrity Engine
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Dooor Mobile Health</h3>
-                    <p className="text-gray-300 text-xl leading-relaxed mb-8 font-extralight">
-                      Comprehensive mobile health monitoring with AI-driven symptom tracking and medication management.
-                      Healthcare at your fingertips, whenever you need it.
+                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Veris</h3>
+                    <p className="text-gray-300 text-xl leading-relaxed mb-4 font-extralight">
+                    Secures the financial and administrative backbone of your health system, 
+                    using the trusted data captured by Kenna to create a single, immutable source of truth.
                     </p>
                     <div className="space-y-4 font-extralight">
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">AI-powered symptom tracking</span>
+                        <span className="text-lg">Provider-payer friction, revenue cycle delays, and fraud risk</span>
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Smart medication reminders</span>
+                        <span className="text-lg">Automates claims processes with crypto proof</span>
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">24/7 health monitoring</span>
+                        <span className="text-lg">Accelerates revenue cycles</span>
                       </div>
                     </div>
                   </div>
@@ -932,17 +945,17 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
                     <div className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-extralight inline-block mb-8">
-                      EHR INTEGRATION
+                      Collaborative Space
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Smart EHR Connector</h3>
+                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Chorus</h3>
                     <p className="text-gray-300 text-xl leading-relaxed mb-8 font-extralight">
-                      Seamless integration with major Brazilian EHR systems including Tasy, MV Soul, and Philips Tasy.
-                      Connect all your healthcare systems effortlessly.
+                      Enable collaborators to execute AI tasks and share information in a secure, collaborative space.
+                      Build, orchestrate, and scale AI Agents workflows with ease.
                     </p>
                     <div className="space-y-4 font-extralight">
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Universal EHR compatibility</span>
+                        <span className="text-lg">MCP compatibility</span>
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
@@ -956,7 +969,7 @@ export default function Home() {
                   </div>
                   <div className="order-1 lg:order-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                      src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Medical Records System"
                       className="w-full h-80 lg:h-96 object-cover rounded-3xl grayscale"
                     />
@@ -970,12 +983,11 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                   <div className="order-2 lg:order-1">
                     <div className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-extralight inline-block mb-8">
-                      VOICE AI
+                      Chat with AI
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Ambient Voice Assistant</h3>
+                    <h3 className="text-4xl lg:text-5xl font-extralight mb-6 text-white leading-tight">Duet</h3>
                     <p className="text-gray-300 text-xl leading-relaxed mb-8 font-extralight">
-                      Hands-free clinical documentation with natural language processing in Portuguese and English.
-                      Let AI handle the paperwork while you focus on patients.
+                      Enables individuals to interact with personal data on their own devices using natural language. Chat with your AI Duet and accelarete your decision making speed.
                     </p>
                     <div className="space-y-4 font-extralight">
                       <div className="flex items-center text-gray-300">
@@ -984,17 +996,17 @@ export default function Home() {
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Multi-language support</span>
+                        <span className="text-lg">Multi-modal support</span>
                       </div>
                       <div className="flex items-center text-gray-300">
                         <CheckCircle className="h-6 w-6 text-white mr-4" />
-                        <span className="text-lg">Hands-free operation</span>
+                        <span className="text-lg">Wisdoms built for you</span>
                       </div>
                     </div>
                   </div>
                   <div className="order-1 lg:order-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      src="https://images.unsplash.com/photo-1619658535018-5a55d32e4628?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="AI Voice Documentation"
                       className="w-full h-80 lg:h-96 object-cover rounded-3xl grayscale"
                     />
@@ -1048,7 +1060,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-center mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            className="text-center mt-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -1290,7 +1302,7 @@ export default function Home() {
       </section>
 
       {/* Technology Excellence */}
-      <section className="py-24 bg-black relative overflow-hidden">
+      <section className="lg:py-24 py-6 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -1388,7 +1400,7 @@ export default function Home() {
       </section>
 
       {/* Strategic Capabilities Section */}
-      <section className="py-24 bg-black relative overflow-hidden">
+      <section className="lg:py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -1527,16 +1539,20 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
+                className="bg-white text-black px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
               >
+                <a href="/contact">
                 Schedule a Demo
+                </a>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
+                className="border border-white text-white px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
               >
+                <a href="/contact">
                 Contact Sales
+                </a>
               </motion.button>
             </div>
           </motion.div>

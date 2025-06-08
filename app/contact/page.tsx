@@ -18,7 +18,7 @@ export default function Contact() {
       <BlobAnimation 
         opacity={0.3} 
         zIndex={1} 
-        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none" 
         color="white" 
       />
       
@@ -73,12 +73,12 @@ export default function Contact() {
                 Send us an Email
               </motion.button>
               
-              <div className="mt-4 md:mt-6 text-center">
+              {/* <div className="mt-4 md:mt-6 text-center">
                 <p className="text-xs md:text-sm text-gray-500 font-extralight">
                   This will open your email client to send a message to{' '}
                   <span className="text-gray-300">thiago@dooor.ai</span>
                 </p>
-              </div>
+              </div> */}
 
               {/* Additional Contact Info */}
               <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10 flex-grow flex flex-col justify-end">
@@ -195,7 +195,9 @@ export default function Contact() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-black px-6 md:px-8 py-2.5 md:py-3 rounded-full text-base md:text-lg font-medium hover:bg-gray-200 transition-all"
             >
+              <a href="/contact">
               Start the Conversation
+              </a>
             </motion.button>
           </motion.div>
         </div>

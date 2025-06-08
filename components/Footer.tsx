@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className="bg-black border-t border-gray-800">
@@ -10,14 +10,20 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <Link href="/" className="text-white text-2xl font-bold mb-4 block">
-              dooor
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo.png" 
+                alt="Dooor Logo" 
+                width={120} 
+                height={40}
+                className="h-6 w-auto"
+              />
             </Link>
-            <p className="text-gray-400 mb-4">
-              Humanizing Healthcare with AI
+            <p className="text-gray-400 mb-4 mt-4">
+              The OS for verifiable AI
             </p>
             <p className="text-sm text-gray-500">
-              All solutions are LGPD-compliant.
+              LGPD and GDPR compliant.
             </p>
           </div>
 
@@ -43,40 +49,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Product Suite */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Product Suite</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/products/ambient-ai" className="text-gray-400 hover:text-white transition-colors">
-                  Ambient AI
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/patient-engagement" className="text-gray-400 hover:text-white transition-colors">
-                  Patient Engagement
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/clinical-decision" className="text-gray-400 hover:text-white transition-colors">
-                  Clinical Decision Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/ehr-integration" className="text-gray-400 hover:text-white transition-colors">
-                  EHR Integration
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Legal */}
           <div>
             <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                  Privacy
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
@@ -102,7 +82,7 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center space-x-6">
-            <Link href="/contact" className="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">
+            <Link href="/contact" className="bg-white text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition-all">
               Let's get in touch
             </Link>
           </div>

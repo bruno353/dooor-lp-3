@@ -102,7 +102,7 @@ export default function HealthcarePage() {
       <BlobAnimation 
         opacity={0.3} 
         zIndex={1} 
-        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none" 
         color="white" 
       />
       
@@ -133,12 +133,12 @@ export default function HealthcarePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8">
+            <div className="inline-flex items-center mt-36 lg:mt-0 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8">
               <Stethoscope className="h-5 w-5 mr-2" />
               <span className="text-sm font-medium">Healthcare Solutions</span>
             </div>
             
-            <h1 className="text-5xl lg:text-8xl font-inter font-extralight mb-8 leading-tight">
+            <h1 className="text-5xl lg:text-8xl font-inter font-extralight mb-8  leading-tight">
               The OS for the {' '}
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Modern Health System
@@ -151,14 +151,18 @@ export default function HealthcarePage() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 font-inter">
               <motion.button
-                className="bg-white text-black px-6 py-2 rounded-full text-base flex items-center justify-center hover:bg-gray-200 transition-all"
+                className="bg-white text-black px-6 w-fit mx-auto lg:mx-0 py-2 rounded-full text-base flex items-center justify-center hover:bg-gray-200 transition-all"
               >
-                Schedule Demo
+                <a href="/contact">
+                Schedule a Demo
+                </a>
               </motion.button>
               <motion.button
-                className="border border-white text-white px-6 py-2 rounded-full text-base hover:bg-white hover:text-black transition-all"
+                className="border border-white text-white px-6 w-fit mx-auto lg:mx-0 py-2 rounded-full text-base hover:bg-white hover:text-black transition-all"
               >
+                <a href="/company">
                 Learn More
+                </a>
               </motion.button>
             </div>
           </motion.div>
@@ -169,7 +173,7 @@ export default function HealthcarePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-2 lg:bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -267,7 +271,7 @@ export default function HealthcarePage() {
       </section>
 
       {/* Unified Platform Section */}
-      <section className="py-24 bg-black relative">
+      <section className="lg:py-24 py-6 bg-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -382,7 +386,7 @@ export default function HealthcarePage() {
       </section>
 
       {/* Beyond the Foundation Section */}
-      <section className="py-24 bg-black relative">
+      <section className="lg:py-24 py-6 bg-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -518,7 +522,7 @@ export default function HealthcarePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-black relative">
+      <section className="lg:py-24 py-6 bg-black relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -527,7 +531,7 @@ export default function HealthcarePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
-              Let's Build the Future of <span className="text-gray-400">Brazilian Healthcare. Together.</span>
+              Let's Build the Future of <span className="text-gray-400">Healthcare. Together.</span>
             </h2>
             <p className="text-xl font-extralight text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
               Our co-development model is designed for visionary leaders ready to build a lasting strategic advantage. Let's discuss how a pilot program featuring <strong className="text-white">Kenna</strong> and <strong className="text-white">Veris</strong> can serve as the first step in transforming your health system.
@@ -536,16 +540,20 @@ export default function HealthcarePage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
+                className="bg-white text-black px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
               >
+                <a href="/contact">
                 Schedule a Demo
+                </a>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
+                className="border border-white text-white px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
               >
+                <a href="/contact">
                 Contact Sales
+                </a>
               </motion.button>
             </div>
           </motion.div>
