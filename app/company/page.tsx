@@ -74,7 +74,7 @@ export default function Company() {
               
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 border border-white/10 text-left">
                 <blockquote className="text-lg md:text-xl lg:text-2xl font-extralight text-gray-300 leading-relaxed italic">
-                  "The power of artificial intelligence will redefine every industry. But this power demands a new foundation—one built not on hype, but on mathematical proof, data sovereignty, and unwavering trust. At Dooor, our single focus is to build this foundation."
+                  "The power of artificial intelligence will redefine every industry. But this power demands a new foundation one, built not on hype, but on mathematical proof, data sovereignty, and unwavering trust. At Dooor, our single focus is to build this foundation."
                 </blockquote>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Company() {
                 Thiago Castroneves is the Co-Founder and CEO of Dooor. He brings a rare perspective to enterprise AI, forged over 15 years designing and implementing mission-critical operational solutions for industrial giant Enviri (formerly Harsco). In roles spanning engineering, innovation, and business development, he developed a deep understanding of the security, reliability, and complexity challenges faced by large-scale, regulated organizations.
               </p>
               <p className="text-gray-300 font-extralight leading-relaxed mt-4">
-                Seeking new models for innovation, Thiago transitioned to the decentralized technology space, where he served as Head of Business Development for the Moonbeam Foundation. There, he cultivated the ecosystem by evaluating over 700 technology projects, giving him an unparalleled market view. This unique journey—from the realities of heavy industry to the frontier of Web3—led him to co-found Dooor, with the mission of bridging the gap and providing enterprises with AI that is not only powerful, but also provably trustworthy.
+                Seeking new models for innovation, Thiago transitioned to the decentralized technology space, where he served as Head of Business Development for the Moonbeam Foundation. There, he cultivated the ecosystem by evaluating over 700 technology projects, giving him an unparalleled market view. This unique journey from the realities of heavy industry to the frontier of Web3-led him to co-found Dooor, with the mission of bridging the gap and providing enterprises with AI that is not only powerful, but also provably trustworthy.
               </p>
             </motion.div>
 
@@ -265,7 +265,7 @@ export default function Company() {
                 </div>
               </div>
               <p className="text-gray-300 font-extralight leading-relaxed">
-                Bruno Laureano is the Co-Founder and CTO of Dooor and the original architect of its Verifiable AI platform. A pioneering engineer in agentic AI, Bruno first developed an award-winning AI auditing agent for GitHub. When faced with the critical enterprise adoption barrier—the risk of sharing sensitive IP—he engineered the elegant decentralized architecture that became the core of Dooor.
+                Bruno Laureano is the Co-Founder and CTO of Dooor and the original architect of its Verifiable AI platform. A pioneering engineer in agentic AI, Bruno first developed an award-winning AI auditing agent for GitHub. When faced with the critical enterprise adoption barrier, the risk of sharing sensitive IP, he engineered the elegant decentralized architecture that became the core of Dooor.
               </p>
               <p className="text-gray-300 font-extralight leading-relaxed mt-4">
                 His work solves the fundamental problem of how to make third-party AI safely usable within secure enterprise environments. With deep expertise in decentralized systems, applied cryptography, and full-stack development, Bruno leads the technical vision to build AI frameworks that are scalable, efficient, and fundamentally secure by design.

@@ -146,7 +146,7 @@ export default function HealthcarePage() {
             </h1>
             
             <p className="text-xl font-extralight lg:text-xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-              The future of healthcare requires a new foundation. One that empowers clinicians, secures the enterprise, and accelerates innovation—all at the same time. The Dooor Healthcare OS is a unified platform built on Verifiable AI, designed to solve the most fundamental challenges facing visionary health systems today.
+              The future of healthcare requires a new foundation. One that empowers clinicians, secures the enterprise, and accelerates innovation, all at the same time. The Dooor Healthcare OS is a unified platform built on Verifiable AI, designed to solve the most fundamental challenges facing visionary health systems today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 font-inter">

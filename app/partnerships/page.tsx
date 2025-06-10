@@ -346,7 +346,7 @@ export default function Partnership() {
                   Mission-Aligned KPIs: Defining Success Together
                 </h3>
                 <p className="text-lg font-extralight text-gray-300 leading-relaxed mb-8">
-                  We begin every partnership by defining what success looks like—not for us, but for you. Our engagement is governed by clear, measurable Key Performance Indicators tied directly to your business outcomes.
+                  We begin every partnership by defining what success looks like, not for us, but for you. Our engagement is governed by clear, measurable Key Performance Indicators tied directly to your business outcomes.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -750,7 +750,7 @@ export default function Partnership() {
                 Mission-Aligned KPIs: Defining Success Together
               </h3>
               <p className="text-base font-extralight text-gray-300 leading-relaxed mb-8">
-                We begin every partnership by defining what success looks like—not for us, but for you. Our engagement is governed by clear, measurable Key Performance Indicators tied directly to your business outcomes.
+                We begin every partnership by defining what success looks like, not for us, but for you. Our engagement is governed by clear, measurable Key Performance Indicators tied directly to your business outcomes.
               </p>
             </motion.div>
 
