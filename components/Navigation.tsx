@@ -120,6 +120,20 @@ const Navigation = () => {
             </div>
           </div>
 
+          {/* Join Hackathon Button */}
+          <div className="hidden md:flex items-center ml-6">
+            <Link href="https://accelar-universe-frontend.vercel.app/hackathons" target="_blank">
+              <motion.button
+                whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(12, 194, 255, 0.5)" }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-gradient-to-r from-white to-gray-100 text-black px-6 py-2 rounded-lg text-sm font-semibold hover:from-[#0cc2ff] hover:to-[#0aa3d9] hover:text-white transition-all duration-300 flex items-center whitespace-nowrap border border-white/20 backdrop-blur-sm"
+              >
+                Join Hackathon
+                <ArrowRight className="h-4 w-4 ml-2" />
+              </motion.button>
+            </Link>
+          </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -271,11 +285,12 @@ const Navigation = () => {
                 className="pt-8 border-t border-white/10"
               >
                 <Link 
-                  href="#register" 
-                  className="block w-full bg-white text-black text-center py-4 px-6 rounded-full font-medium hover:bg-gray-200 transition-all"
+                  href="https://accelar-universe-frontend.vercel.app/" 
+                  target="_blank"
+                  className="block w-full bg-gradient-to-r from-white to-gray-100 text-black text-center py-4 px-6 rounded-lg font-semibold hover:from-[#0cc2ff] hover:to-[#0aa3d9] hover:text-white transition-all duration-300 border border-white/20"
                   onClick={() => setIsOpen(false)}
                 >
-                  Register Now
+                  Join Hackathon
                 </Link>
               </motion.div>
             </motion.div>

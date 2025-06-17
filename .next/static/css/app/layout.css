@@ -561,6 +561,9 @@ video {
 .ml-2{
   margin-left: 0.5rem;
 }
+.ml-6{
+  margin-left: 1.5rem;
+}
 .mr-2{
   margin-right: 0.5rem;
 }
@@ -702,6 +705,9 @@ video {
 }
 .w-px{
   width: 1px;
+}
+.w-3{
+  width: 0.75rem;
 }
 .max-w-2xl{
   max-width: 42rem;
@@ -852,6 +858,9 @@ video {
 }
 .overflow-hidden{
   overflow: hidden;
+}
+.whitespace-nowrap{
+  white-space: nowrap;
 }
 .rounded-2xl{
   border-radius: 1rem;
@@ -1090,6 +1099,9 @@ video {
 }
 .to-white\/5{
   --tw-gradient-to: rgb(255 255 255 / 0.05) var(--tw-gradient-to-position);
+}
+.to-gray-100{
+  --tw-gradient-to: #f3f4f6 var(--tw-gradient-to-position);
 }
 .bg-clip-text{
   -webkit-background-clip: text;
@@ -1614,6 +1626,16 @@ a:focus-visible {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.hover\:from-\[\#0cc2ff\]:hover{
+  --tw-gradient-from: #0cc2ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(12 194 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:to-\[\#0aa3d9\]:hover{
+  --tw-gradient-to: #0aa3d9 var(--tw-gradient-to-position);
+}
+
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -1698,6 +1720,9 @@ a:focus-visible {
   }
   .md\:block{
     display: block;
+  }
+  .md\:flex{
+    display: flex;
   }
   .md\:hidden{
     display: none;
