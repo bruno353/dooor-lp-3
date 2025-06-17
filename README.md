@@ -22,6 +22,30 @@ A modern, responsive website for Dooor - AI solutions for healthcare built with 
   - Clinical Decision Support
   - EHR Integration
 
+## Tech Stack
+
+### Frontend Framework
+- **Next.js 14** - React framework with App Router and Server Components
+- **React 18** - Latest React with concurrent features
+- **TypeScript** - Type-safe JavaScript development
+
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, customizable icons
+- **next/font** - Optimized Google Fonts loading
+
+### Development Tools
+- **ESLint** - Code linting and quality
+- **Prettier** - Code formatting
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixes
+
+### Deployment & Hosting
+- **Vercel** - Optimized for Next.js deployment
+- **Edge Runtime** - Global edge network
+- **Static Site Generation** - Pre-rendered pages for performance
+
 ## Getting Started
 
 ### Prerequisites
@@ -74,15 +98,6 @@ dooor-website/
 ├── public/               # Static assets
 └── package.json          # Dependencies
 ```
-
-## Technologies Used
-
-- **Next.js 14**: React framework with App Router
-- **React 18**: Latest React with Hooks and Suspense
-- **Tailwind CSS**: Utility-first CSS framework
-- **Framer Motion**: Animation library
-- **Lucide React**: Modern icon set
-- **TypeScript**: Type-safe JavaScript
 
 ## Customization
 

@@ -1,9 +1,3 @@
 {
-  "/company/page": "app/company/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/partnerships/page": "app/partnerships/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/solutions/healthcare/page": "app/solutions/healthcare/page.js",
-  "/community/page": "app/community/page.js",
   "/page": "app/page.js"
 }

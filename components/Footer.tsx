@@ -8,65 +8,101 @@ const Footer = () => {
     <footer className="bg-black border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Hackathon Info */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center">
               <Image 
                 src="/logo.png" 
-                alt="Dooor Logo" 
+                alt="CrossFi Hackathon" 
                 width={120} 
                 height={40}
                 className="h-6 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-4 mt-4">
-              The OS for verifiable AI
+              CrossFi Blockchain Hackathon - Building the future of decentralized education
             </p>
             <p className="text-sm text-gray-500">
-              LGPD and GDPR compliant.
+              Total Prize Pool: $500,000 USD in MPX tokens
             </p>
           </div>
 
-          {/* Company Links */}
+          {/* Hackathon Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Company</h3>
+            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Hackathon</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/partnerships" className="text-gray-400 hover:text-white transition-colors">
-                  Partnerships
+                <Link href="#tracks" className="text-gray-400 hover:text-white transition-colors">
+                  Tracks
                 </Link>
               </li>
               <li>
-                <Link href="/company" className="text-gray-400 hover:text-white transition-colors">
-                  Company
+                <Link href="#prizes" className="text-gray-400 hover:text-white transition-colors">
+                  Prizes
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                <Link href="#timeline" className="text-gray-400 hover:text-white transition-colors">
+                  Timeline
+                </Link>
+              </li>
+              <li>
+                <Link href="#rules" className="text-gray-400 hover:text-white transition-colors">
+                  Rules & Guidelines
                 </Link>
               </li>
             </ul>
           </div>
 
-
-          {/* Legal */}
+          {/* CrossFi Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Legal</h3>
+            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">CrossFi</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
-                  Privacy Policy
+                <Link href="#about" className="text-gray-400 hover:text-white transition-colors">
+                  About CrossFi
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                  Terms of Use
+                <Link href="#ecosystem" className="text-gray-400 hover:text-white transition-colors">
+                  CrossFi Universe
                 </Link>
               </li>
               <li>
-                <Link href="/compliance" className="text-gray-400 hover:text-white transition-colors">
-                  LGPD Compliance
+                <Link href="#technology" className="text-gray-400 hover:text-white transition-colors">
+                  Technology
+                </Link>
+              </li>
+              <li>
+                <Link href="#community" className="text-gray-400 hover:text-white transition-colors">
+                  Community
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 uppercase tracking-wide">Support</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#faq" className="text-gray-400 hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="#discord" className="text-gray-400 hover:text-white transition-colors">
+                  Discord Community
+                </Link>
+              </li>
+              <li>
+                <Link href="#resources" className="text-gray-400 hover:text-white transition-colors">
+                  Developer Resources
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Support
                 </Link>
               </li>
             </ul>
@@ -77,13 +113,13 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-4 md:mb-0">
             <span className="text-gray-400 text-sm">
-              © 2025 Dooor. All rights reserved.
+              © 2025 CrossFi Blockchain Hackathon. All rights reserved.
             </span>
           </div>
           
           <div className="flex items-center space-x-6">
-            <Link href="/contact" className="bg-white text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition-all">
-              Let's get in touch
+            <Link href="#register" className="bg-white text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-200 transition-all">
+              Register for Hackathon
             </Link>
           </div>
         </div>

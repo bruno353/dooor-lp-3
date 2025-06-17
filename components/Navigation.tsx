@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false)
+  const [isTracksOpen, setIsTracksOpen] = useState(false)
+  const [isMobileTracksOpen, setIsMobileTracksOpen] = useState(false)
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
@@ -19,11 +19,11 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/logo.png" 
-                alt="Dooor Logo" 
-                width={120} 
-                height={40}
-                className="h-6 w-auto"
+                src="/crossfi-logo.png" 
+                alt="CrossFi Hackathon" 
+                width={360} 
+                height={120}
+                className="h-24 w-auto"
               />
             </Link>
           </div>
@@ -32,25 +32,17 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-11 h-16">
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/partnerships" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
-                Partnerships
-              </Link>
-              <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/company" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
-                Company
-              </Link>
-              <div className="w-px bg-white/30 h-full"></div>
               <div 
                 className="relative h-full flex items-center"
-                onMouseEnter={() => setIsSolutionsOpen(true)}
-                onMouseLeave={() => setIsSolutionsOpen(false)}
+                onMouseEnter={() => setIsTracksOpen(true)}
+                onMouseLeave={() => setIsTracksOpen(false)}
               >
                 <div className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full cursor-pointer">
-                  Solutions
+                  Tracks
                 </div>
                 
                 <AnimatePresence>
-                  {isSolutionsOpen && (
+                  {isTracksOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -60,55 +52,69 @@ const Navigation = () => {
                     >
                       {/* Header */}
                       <div className="px-6 py-6 border-b border-white/10">
-                        <h3 className="text-xl font-extralight text-white mb-2">Dooor Solutions</h3>
-                        <p className="text-sm text-gray-400 font-extralight">Purpose-built AI for high-stakes industries</p>
+                        <h3 className="text-xl font-extralight text-white mb-2">Hackathon Tracks</h3>
+                        <p className="text-sm text-gray-400 font-extralight">Choose your development path</p>
                       </div>
                       
-                      {/* Solutions Grid */}
+                      {/* Tracks Grid */}
                       <div className="p-6 space-y-4">
-                        {/* Healthcare - Active */}
-                        <Link href="/solutions/healthcare">
+                        {/* AI & Decentralized Infrastructure */}
+                        <Link href="#tracks">
                           <motion.div
                             whileHover={{ x: 4 }}
                             className="group flex items-center p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
                           >
                             <div className="flex-grow">
-                              <h4 className="text-white font-medium text-sm mb-1">Healthcare</h4>
-                              <p className="text-gray-400 text-xs font-extralight">The OS for the Modern Health System</p>
+                              <h4 className="text-white font-medium text-sm mb-1">AI & Decentralized Infrastructure</h4>
+                              <p className="text-gray-400 text-xs font-extralight">Build scalable AI solutions on blockchain</p>
                             </div>
                             <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />
                           </motion.div>
                         </Link>
 
-                        {/* Financial - Disabled */}
-                        <div className="group flex items-center p-4 rounded-xl bg-white/5 border border-white/5 opacity-100 cursor-not-allowed">
-                          <div className="flex-grow">
-                            <h4 className="text-gray-500 font-medium text-sm mb-1">Financial</h4>
-                            <p className="text-gray-600 text-xs font-extralight">Coming Soon</p>
-                          </div>
-                          <div className="text-xs bg-gray-500/20 text-gray-500 px-2 py-1 rounded-full">
-                            Soon
-                          </div>
-                        </div>
+                        {/* UI/UX SocialFi & EduTech */}
+                        <Link href="#tracks">
+                          <motion.div
+                            whileHover={{ x: 4 }}
+                            className="group flex items-center p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
+                          >
+                            <div className="flex-grow">
+                              <h4 className="text-white font-medium text-sm mb-1">UI/UX SocialFi & EduTech</h4>
+                              <p className="text-gray-400 text-xs font-extralight">Create engaging educational experiences</p>
+                            </div>
+                            <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />
+                          </motion.div>
+                        </Link>
 
-                        {/* Legal - Disabled */}
-                        <div className="group flex items-center p-4 rounded-xl bg-white/5 border border-white/5 opacity-100 cursor-not-allowed">
-                          <div className="flex-grow">
-                            <h4 className="text-gray-500 font-medium text-sm mb-1">Legal</h4>
-                            <p className="text-gray-600 text-xs font-extralight">Coming Soon</p>
-                          </div>
-                          <div className="text-xs bg-gray-500/20 text-gray-500 px-2 py-1 rounded-full">
-                            Soon
-                          </div>
-                        </div>
+                        {/* CrossChain Scalability */}
+                        <Link href="#tracks">
+                          <motion.div
+                            whileHover={{ x: 4 }}
+                            className="group flex items-center p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
+                          >
+                            <div className="flex-grow">
+                              <h4 className="text-white font-medium text-sm mb-1">CrossChain Scalability</h4>
+                              <p className="text-gray-400 text-xs font-extralight">Bridge ecosystems seamlessly</p>
+                            </div>
+                            <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />
+                          </motion.div>
+                        </Link>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
               <div className="w-px bg-white/30 h-full"></div>
-              <Link href="/contact" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
-                Contact
+              <Link href="#roadmap" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                Roadmap
+              </Link>
+              <div className="w-px bg-white/30 h-full"></div>
+              <Link href="#prizes" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                Prizes
+              </Link>
+              <div className="w-px bg-white/30 h-full"></div>
+              <Link href="https://xfi.foundation/hackathon" className="text-white hover:text-white/75 px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wide flex items-center h-full">
+                About CrossFi
               </Link>
               <div className="w-px bg-white/30 h-full"></div>
             </div>
@@ -147,143 +153,130 @@ const Navigation = () => {
             >
               {/* Mobile Menu Items */}
               <div className="space-y-4">
-                {/* Partnerships */}
+                {/* Tracks with Dropdown */}
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
+                  className="space-y-2"
                 >
-                  <Link 
-                    href="/partnerships" 
-                    className="block text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
-                    onClick={() => setIsOpen(false)}
+                  <button
+                    onClick={() => setIsMobileTracksOpen(!isMobileTracksOpen)}
+                    className="w-full flex items-center justify-between text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
                   >
-                    Partnerships
-                  </Link>
+                    Tracks
+                    <ChevronDown className={`h-5 w-5 transition-transform ${isMobileTracksOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {isMobileTracksOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-6 space-y-2 overflow-hidden"
+                      >
+                        <Link 
+                          href="#tracks" 
+                          className="block text-gray-300 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 transition-all"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          AI & Decentralized Infrastructure
+                        </Link>
+                        <Link 
+                          href="#tracks" 
+                          className="block text-gray-300 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 transition-all"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          UI/UX SocialFi & EduTech
+                        </Link>
+                        <Link 
+                          href="#tracks" 
+                          className="block text-gray-300 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 transition-all"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          CrossChain Scalability
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.div>
 
-                {/* Company */}
+                {/* Roadmap */}
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
                   <Link 
-                    href="/company" 
+                    href="#roadmap" 
                     className="block text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
                     onClick={() => setIsOpen(false)}
                   >
-                    Company
+                    Roadmap
                   </Link>
                 </motion.div>
 
-                {/* Solutions with Dropdown */}
+                {/* Prizes */}
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="space-y-2"
                 >
-                  <button
-                    onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
-                    className="w-full flex items-center justify-between text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
+                  <Link 
+                    href="#prizes" 
+                    className="block text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
+                    onClick={() => setIsOpen(false)}
                   >
-                    Solutions
-                    <ChevronDown className={`h-5 w-5 transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
-                  </button>
-
-                  <AnimatePresence>
-                    {isMobileSolutionsOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 space-y-3 py-3">
-                          {/* Healthcare */}
-                          <Link 
-                            href="/solutions/healthcare"
-                            className="block"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-white/20 transition-all">
-                              <h4 className="text-white font-medium text-sm mb-1">Healthcare</h4>
-                              <p className="text-gray-400 text-xs font-extralight">The OS for the Modern Health System</p>
-                            </div>
-                          </Link>
-
-                          {/* Financial - Disabled */}
-                          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/5 opacity-60">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="text-gray-500 font-medium text-sm mb-1">Financial</h4>
-                                <p className="text-gray-600 text-xs font-extralight">Coming Soon</p>
-                              </div>
-                              <div className="text-xs bg-gray-500/20 text-gray-500 px-2 py-1 rounded-full">
-                                Soon
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Legal - Disabled */}
-                          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/5 opacity-60">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="text-gray-500 font-medium text-sm mb-1">Legal</h4>
-                                <p className="text-gray-600 text-xs font-extralight">Coming Soon</p>
-                              </div>
-                              <div className="text-xs bg-gray-500/20 text-gray-500 px-2 py-1 rounded-full">
-                                Soon
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    Prizes
+                  </Link>
                 </motion.div>
 
-                {/* Contact */}
+                {/* Timeline */}
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
                   <Link 
-                    href="/contact" 
+                    href="#timeline" 
                     className="block text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
                     onClick={() => setIsOpen(false)}
                   >
-                    Contact
+                    Timeline
+                  </Link>
+                </motion.div>
+
+                {/* About CrossFi */}
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  <Link 
+                    href="#about" 
+                    className="block text-white hover:text-gray-300 text-lg font-extralight uppercase tracking-wide py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About CrossFi
                   </Link>
                 </motion.div>
               </div>
 
-              {/* Mobile CTA Section */}
+              {/* CTA Section */}
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="pt-8 border-t border-white/10"
               >
-                <div className="space-y-4">
-                  <Link 
-                    href="/contact"
-                    className="block w-full bg-white text-black text-center py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition-all"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Get Started
-                  </Link>
-                  <Link 
-                    href="/partnerships"
-                    className="block w-full border border-white text-white text-center py-3 px-6 rounded-full font-medium hover:bg-white hover:text-black transition-all"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Learn More
-                  </Link>
-                </div>
+                <Link 
+                  href="#register" 
+                  className="block w-full bg-white text-black text-center py-4 px-6 rounded-full font-medium hover:bg-gray-200 transition-all"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Register Now
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>
