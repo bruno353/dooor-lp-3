@@ -766,8 +766,8 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10 flex items-center justify-between h-full">
                 <div>
-                  <h3 className="text-lg md:text-xl font-extralight text-white mb-1 md:mb-2">EHR Integration</h3>
-                  <p className="text-gray-200 text-xs md:text-sm font-extralight">Integrate with your existing EHR system</p>
+                  <h3 className="text-lg md:text-xl font-extralight text-white mb-1 md:mb-2">DeFi Integration</h3>
+                  <p className="text-gray-200 text-xs md:text-sm font-extralight">Build on CrossFi DeFi infrastructure</p>
                 </div>
                 <div className="text-right">
                   <div className="text-white font-medium text-xs md:text-sm">99.9% Uptime</div>
@@ -1107,9 +1107,9 @@ export default function Home() {
               <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
                 ANALYTICS
               </div>
-              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Clinical Analytics Dashboard</h3>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">CrossFi Analytics Dashboard</h3>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
-                Real-time insights and predictive analytics for better clinical decision-making and operational efficiency.
+                Real-time insights and predictive analytics for educational performance tracking and blockchain metrics.
               </p>
               <div className="space-y-3 font-extralight">
                 <div className="flex items-center text-gray-300">
@@ -1118,11 +1118,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Predictive patient analytics</span>
+                  <span className="text-sm">Educational progress analytics</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Operational efficiency insights</span>
+                  <span className="text-sm">Blockchain network insights</span>
                 </div>
               </div>
             </motion.div>
@@ -1145,22 +1145,22 @@ export default function Home() {
               <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
                 MOBILE
               </div>
-              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Dooor Mobile Health</h3>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">CrossFi Mobile SDK</h3>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
-                Comprehensive mobile health monitoring with AI-driven symptom tracking and medication management.
+                Comprehensive mobile development kit for building decentralized educational applications with blockchain integration.
               </p>
               <div className="space-y-3 font-extralight">
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">AI-powered symptom tracking</span>
+                  <span className="text-sm">Cross-platform SDK support</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Smart medication reminders</span>
+                  <span className="text-sm">Blockchain integration tools</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">24/7 health monitoring</span>
+                  <span className="text-sm">Educational app templates</span>
                 </div>
               </div>
             </motion.div>
@@ -1181,24 +1181,24 @@ export default function Home() {
                 />
               </div>
               <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
-                EHR INTEGRATION
+                BLOCKCHAIN INTEGRATION
               </div>
-              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Smart EHR Connector</h3>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Smart Contract Builder</h3>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
-                Seamless integration with major Brazilian EHR systems including Tasy, MV Soul, and Philips Tasy.
+                Seamless integration with CrossFi blockchain infrastructure for building decentralized educational platforms.
               </p>
               <div className="space-y-3 font-extralight">
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Universal EHR compatibility</span>
+                  <span className="text-sm">Smart contract templates</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Real-time data synchronization</span>
+                  <span className="text-sm">Real-time blockchain sync</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Secure data transfer protocols</span>
+                  <span className="text-sm">Secure transaction protocols</span>
                 </div>
               </div>
             </motion.div>
@@ -1219,11 +1219,11 @@ export default function Home() {
                 />
               </div>
               <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
-                VOICE AI
+                AI EDUCATION
               </div>
-              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Ambient Voice Assistant</h3>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">AI Learning Assistant</h3>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
-                Hands-free clinical documentation with natural language processing in Portuguese and English.
+                Intelligent tutoring system with natural language processing for personalized educational experiences.
               </p>
               <div className="space-y-3 font-extralight">
                 <div className="flex items-center text-gray-300">
@@ -1236,7 +1236,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Hands-free operation</span>
+                  <span className="text-sm">Personalized learning paths</span>
                 </div>
               </div>
             </motion.div>
@@ -1257,24 +1257,24 @@ export default function Home() {
                 />
               </div>
               <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-extralight inline-block mb-4">
-                ENGAGEMENT
+                STUDENT ENGAGEMENT
               </div>
-              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Patient Experience Hub</h3>
+              <h3 className="text-2xl font-extralight mb-4 text-white leading-tight">Student Experience Platform</h3>
               <p className="text-gray-300 text-base leading-relaxed mb-6 font-extralight">
-                Omnichannel patient engagement with AI-powered appointment scheduling and care coordination.
+                Comprehensive student engagement platform with gamification, NFT certificates, and peer-to-peer learning.
               </p>
               <div className="space-y-3 font-extralight">
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Omnichannel communication</span>
+                  <span className="text-sm">Gamified learning experience</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">AI-powered scheduling</span>
+                  <span className="text-sm">NFT certificate system</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-white mr-3" />
-                  <span className="text-sm">Care coordination platform</span>
+                  <span className="text-sm">Peer-to-peer learning network</span>
                 </div>
               </div>
             </motion.div>
@@ -1288,7 +1288,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-16"
             onClick={() => {
-              window.location.href = 'https://crossfi.org/documents/';
+              window.location.href = 'https://accelar-universe-frontend.vercel.app/hackathons';
             }}
           >
             <motion.button
@@ -1296,7 +1296,7 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-black px-6 py-3 rounded-full text-base font-medium hover:bg-gray-200 transition-all inline-flex items-center"
             >
-              Explore All Products <ArrowRight className="h-4 w-4 ml-2" />
+              Join CrossFi Hackathon <ArrowRight className="h-4 w-4 ml-2" />
             </motion.button>
           </motion.div>
         </div>
@@ -1528,10 +1528,10 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl lg:text-6xl font-extralight mb-8">
-              Build Your Future on  <span className="text-gray-400">Verifiable AI</span>
+              Build Your Future on  <span className="text-gray-400">CrossFi Blockchain</span>
             </h2>
             <p className="text-xl font-extralight text-gray-400 mb-12 max-w-2xl mx-auto">
-              Let's explore how the Dooor OS can become the engine for your organization's most ambitious goals.
+              Let's explore how CrossFi blockchain can become the foundation for your organization's most innovative educational solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.button
@@ -1539,8 +1539,8 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-black px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition-all"
               >
-                <a href="/contact">
-                Schedule a Demo
+                <a href="https://accelar-universe-frontend.vercel.app/hackathons">
+                Join Hackathon
                 </a>
               </motion.button>
               <motion.button
@@ -1548,8 +1548,8 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="border border-white text-white px-8 w-fit mx-auto lg:mx-0 py-3 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all"
               >
-                <a href="/contact">
-                Contact Sales
+                <a href="#tracks">
+                Explore Tracks
                 </a>
               </motion.button>
             </div>

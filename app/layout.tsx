@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 export const metadata = {
-  title: 'Dooor - Humanizing Healthcare with AI',
-  description: 'Dooor delivers next-generation artificial intelligence solutions that empower clinicians, optimize operations, and put the human connection back at the center of care.',
+  title: 'CrossFi - Blockchain-based Decentralized Finance',
+  description: 'CrossFi is a platform that enables payments, lending, and borrowing in a decentralized manner.',
 }
 
 export default function RootLayout({

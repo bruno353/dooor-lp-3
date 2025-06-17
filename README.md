@@ -127,4 +127,4 @@ The website can be deployed to any platform that supports Next.js:
 
 ## License
 
-Private - All rights reserved by Dooor. 
+Private - All rights reserved by Accelar. 
